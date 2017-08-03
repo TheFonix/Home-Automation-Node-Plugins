@@ -1,7 +1,5 @@
-read -p "Are you on Ubuntu 16.04? " -n 1 -r
-echo    # (optional) move to a new line
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
+read -p "Are you on Ubuntu 16.04 (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
 
 echo "Making sure you have Git installed!"
   sudo apt-get install git
